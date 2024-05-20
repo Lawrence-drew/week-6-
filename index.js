@@ -8,6 +8,7 @@ const PORT = process.env.PORT || 8000
 
 app.use(express.json())
 
+//MONGODB_URL = mongodb+srv://backend_DB:<password>@mondodbsession.crzxtfx.mongodb.net/?retryWrites=true&w=majority&appName=MondoDBSession
 mongoose.connect( process.env.MONGODB_URL).then(()=> console.log("MongoDB connected...."))
 
 app.get("/get-product", functions.handleGetProduct)
